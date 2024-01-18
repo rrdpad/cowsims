@@ -28,13 +28,15 @@ public class RotateClass : MonoBehaviour
     {
         var input = new Vector2(x: Input.GetAxisRaw("Horizontal"), y: Input.GetAxisRaw("Vertical"));
         _rigidbody.velocity = input.normalized * _speed;
-        if (input.x == 0)
-        {
-            anim.SetBool("is running", false);
-        }
-        else
+
+        if (input.y < 0 || input.y > 0 ^ input.x < 0 || input.x > 0)
         {
             anim.SetBool("is running", true);
         }
+        else
+        {
+            anim.SetBool("is running", false);
+        }
+       
     }
 }
