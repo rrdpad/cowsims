@@ -21,6 +21,6 @@ public class Bullet : MonoBehaviour
             }
             Destroy(gameObject);
         }
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
 }
