@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainCamera : MonoBehaviour
 {
     private Transform player;
+    private const float CameraSpeed = 2f;
 
 
     // Start is called before the first frame update
@@ -16,10 +17,7 @@ public class MainCamera : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        Vector3 temp = transform.position;
-        temp.x = player.position.x;
-        temp.y = player.position.y;
-
-        transform.position = temp;
+        var charPos = new Vector3(player.position.x,player.position.y,-10f);
+		transform.position = Vector3.Slerp(transform.position,charPos, (float)Time.deltaTime * CameraSpeed);
     }
 }
