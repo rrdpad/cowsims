@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainCamera : MonoBehaviour
 {
     private Transform player;
-    private const float CameraSpeed = 2f;
+    private const float CameraSpeed = 5f;
 
 
     // Start is called before the first frame update
