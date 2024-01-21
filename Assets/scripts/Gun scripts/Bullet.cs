@@ -8,7 +8,15 @@ public class Bullet : MonoBehaviour
     public float lifetime;
     public float distance;
     public int damage;
+
     public LayerMask whatIsSolid;
+
+    public GameObject destroyEffect;
+
+    private void Start()
+    {
+        Invoke("DesroyBullet", lifetime);
+    }
 
     private void Update()
     {
@@ -19,8 +27,13 @@ public class Bullet : MonoBehaviour
             {
                 hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
             }
-            Destroy(gameObject);
+            DestroyBullet();
         }
         transform.Translate(Vector2.left * speed * Time.deltaTime);
+    }
+
+    public void DestroyBullet()
+    {
+        Destroy(gameObject);
     }
 }
