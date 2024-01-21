@@ -14,6 +14,9 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Vector3 v_diff;
     private float atan2;
+    private float distance;
+    [SerializeField]
+    public float speed = 50f;
 
     private void Awake()
     {
@@ -25,8 +28,8 @@ public class EnemyMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Rotation();
+        Walk();
         //TODO: ДАБАВИТЬ ДВИЖЕНИЕ
-        _rigidbody.velocity = new Vector2(1,0);
 
     }
     private void Rotation()
@@ -34,6 +37,14 @@ public class EnemyMovement : MonoBehaviour
         v_diff = (_player.position - transform.position);
         atan2 = Mathf.Atan2(v_diff.y, v_diff.x);
         transform.rotation = Quaternion.Euler(0f, 0f, atan2 * Mathf.Rad2Deg - 90f);
+    }
+
+    private void Walk()
+    {
+        distance = Vector2.Distance(transform.position, _player.position);
+        Vector2 direction = _player.position - transform.position;
+
+        transform.position = Vector2.MoveTowards(transform.position, _player.transform.position, speed * (float)Time.deltaTime);
     }
 
 }
