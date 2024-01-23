@@ -29,8 +29,6 @@ public class EnemyMovement : MonoBehaviour
     {
         Rotation();
         Walk();
-        //TODO: ДАБАВИТЬ ДВИЖЕНИЕ
-
     }
     private void Rotation()
     {
