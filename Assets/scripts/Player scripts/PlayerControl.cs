@@ -4,12 +4,13 @@ using System.Collections;
 public class RotateClass : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
-    [SerializeField] private float _speed;
-    private Animator anim;
+    [SerializeField] 
+    private float _speed;
+    private Animator _anim;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        _anim = GetComponent<Animator>();
     }
     void Update()
     {
@@ -30,11 +31,11 @@ public class RotateClass : MonoBehaviour
 
         if (input.y < 0 || input.y > 0 || input.x < 0 || input.x > 0)
         {
-            anim.SetBool("is running", true);
+            _anim.SetBool("is running", true);
         }
         else
         {
-            anim.SetBool("is running", false);
+            _anim.SetBool("is running", false);
         }
     }
 }
