@@ -6,7 +6,6 @@ public class RotateClass : MonoBehaviour
     private Rigidbody2D _rigidbody;
     [SerializeField] private float _speed;
     private Animator anim;
-    private Vector2 direction;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -37,6 +36,5 @@ public class RotateClass : MonoBehaviour
         {
             anim.SetBool("is running", false);
         }
-       
     }
 }
