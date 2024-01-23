@@ -71,3 +71,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 .vsconfig
+.idea/.idea.cowsim/.idea/encodings.xml
+.idea/.idea.cowsim/.idea/indexLayout.xml
+.idea/.idea.cowsim/.idea/vcs.xml
