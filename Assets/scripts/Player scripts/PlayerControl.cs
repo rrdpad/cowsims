@@ -1,10 +1,14 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class RotateClass : MonoBehaviour
 {
+    // Доступность оружия 
+    public int[] equipment = new int[3] { 0, 0, 0 };
+
     private Rigidbody2D _rigidbody;
-    [SerializeField] 
+    [SerializeField]
     private float _speed;
     private Animator _anim;
     void Start()
@@ -16,6 +20,8 @@ public class RotateClass : MonoBehaviour
     {
         LookAtMouse();
         Move();
+
+        OpenShop();
     }
 
     private void LookAtMouse()
@@ -37,5 +43,11 @@ public class RotateClass : MonoBehaviour
         {
             _anim.SetBool("is running", false);
         }
+    }
+
+    private void OpenShop()
+    {
+        if (Input.GetKey(key: KeyCode.N))
+            SceneManager.LoadScene("Tample", LoadSceneMode.Single);
     }
 }
