@@ -1298,8 +1298,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   one: {fileID: 702217663}
-  two: {fileID: 0}
-  three: {fileID: 0}
+  two: {fileID: 1047050708}
+  three: {fileID: 1003282157}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
