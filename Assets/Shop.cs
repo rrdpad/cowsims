@@ -4,6 +4,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
+using TMPro.Examples;
 public class Shop : MonoBehaviour
 {
     public Button one, two, three;
@@ -33,6 +35,7 @@ public class Shop : MonoBehaviour
             two.interactable = false;
         else if (BoughtStatus[2] == 1)
             three.interactable = false;
+
     }
 
     private int[] SplitNumbers(string file)
@@ -44,5 +47,15 @@ public class Shop : MonoBehaviour
     public void BuyAk47()
     {
         BoughtStatus[0] = 1;
+    }
+
+    public void BuyUZi()
+    {
+        BoughtStatus[1] = 1;
+    }
+
+    public void Exit()
+    {
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 }
