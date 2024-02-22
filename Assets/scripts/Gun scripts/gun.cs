@@ -6,10 +6,16 @@ public class gun : MonoBehaviour
 {
     public GameObject bullet;
     public Transform shotPoint;
+    private AudioSource aS;
 
     private float timeBtwShots;
     public float startTimeBtwShots;
 
+
+    private void Awake()
+    {
+        aS = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if(timeBtwShots <= 0)
@@ -23,6 +29,15 @@ public class gun : MonoBehaviour
         else
         {
             timeBtwShots -= Time.deltaTime;
+        }
+
+        if (Input.GetMouseButtonDown(0) | Input.GetMouseButtonUp(0) == true)
+        {
+            aS.Play();
+        }
+        if (Input.GetMouseButton(0) == false)
+        {
+            aS.Stop();
         }
     }
 }
