@@ -7,6 +7,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private Animator _anim;
+    public Animation anim;
     public int health;
     public float speed;
     public GameObject obj;
@@ -23,19 +24,12 @@ public class Enemy : MonoBehaviour
     }
     private void Update()
     {
+        obj.GetComponent<Animator>().SetBool("KillFemka", true);
         if (health <= 0)
         {
             Destroy(gameObject);
         }
         transform.Translate(Vector2.left * speed * Time.deltaTime);
-
-
-        if (GameObject.Find("Femka") == null)
-        {
-            obj.GetComponent<Animator>().SetBool("KillFemka", true);
-        }
-
-        
 
     }
     public void TakeDamage(int damage) 

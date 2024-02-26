@@ -8,6 +8,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float _minimumSpawnTime;
     [SerializeField] private float _maximumSpawnTime;
 
+    
+
     private float _timeUntilSpawn;
 
     private void Awake()
@@ -15,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
         SetTimeUntilSpawn();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         _timeUntilSpawn -= Time.deltaTime;
