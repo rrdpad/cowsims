@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3546633607367481059}
   - component: {fileID: 7162008148637747466}
   - component: {fileID: 7649986115638778047}
+  - component: {fileID: -3466548496037979874}
   m_Layer: 8
   m_Name: BlackFemka
   m_TagString: Enemy
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 25, y: 25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -218,3 +219,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-3466548496037979874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451121276993057841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa69feae95fcb44418f9610c11ee0d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 10
+  maxHealth: 10
+  OnDied:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
