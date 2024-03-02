@@ -74,3 +74,5 @@ crashlytics-build.properties
 .idea/.idea.cowsim/.idea/encodings.xml
 .idea/.idea.cowsim/.idea/indexLayout.xml
 .idea/.idea.cowsim/.idea/vcs.xml
+.directory
+weapons.txt

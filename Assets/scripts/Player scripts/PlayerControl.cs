@@ -4,7 +4,7 @@ using System.Collections;
 public class RotateClass : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
-    [SerializeField] 
+    [SerializeField]
     private float _speed;
     private Animator _anim;
     void Start()

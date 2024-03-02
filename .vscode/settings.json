@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "cowsim.sln"
+    "dotnet.defaultSolution": "cowsims.sln"
 }
