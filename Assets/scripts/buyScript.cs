@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class buyScript : MonoBehaviour
@@ -39,6 +40,9 @@ public class buyScript : MonoBehaviour
         updateStatus();
     }
 
+    public void toMenu() => SceneManager.LoadScene(0);
+    public void toGame() => SceneManager.LoadScene(2);
+    
     private void updateStatus()
     {
         if (boughtStatus[0] == 1)

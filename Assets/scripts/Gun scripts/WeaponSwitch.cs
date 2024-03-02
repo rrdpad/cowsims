@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class WeaponSwitch : MonoBehaviour
 {
     public int weaponSwitch = 0;
 
+    int[] boughtStatus;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        var filePath = @"./weapons.txt";
+        if (File.Exists(filePath))
+            boughtStatus = SplitNumbers(filePath);
     }
 
     // Update is called once per frame
@@ -17,37 +22,24 @@ public class WeaponSwitch : MonoBehaviour
     {
         int currentWeapon = weaponSwitch;
 
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
-        {
-            if (weaponSwitch >= transform.childCount - 1)
-            {
-                weaponSwitch = 0;
-            }
-            else
-            {
-                weaponSwitch++;
-            }
-        }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
-        {
-            if (weaponSwitch <= 0)
-            {
-                weaponSwitch = transform.childCount - 1;
-            }
-            else
-            {
-                weaponSwitch--;
-            }
-        }
-
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             weaponSwitch = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2 & boughtStatus[0] == 1)
         {
             weaponSwitch = 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3 & boughtStatus[1] == 1)
+        {
+            weaponSwitch = 2;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4) && transform.childCount >= 4 & boughtStatus[2] == 1)
+        {
+            weaponSwitch = 3;
         }
 
         if (currentWeapon != weaponSwitch)
@@ -67,5 +59,11 @@ public class WeaponSwitch : MonoBehaviour
                 weapon.gameObject.SetActive(false);
             i++;
         }
+    }
+
+    private int[] SplitNumbers(string file)
+    {
+        var splt = File.ReadAllText(file).Split(' ');
+        return new int[] { int.Parse(splt[0]), int.Parse(splt[1]), int.Parse(splt[2]) };
     }
 }
