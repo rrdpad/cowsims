@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class ScneneChanger : MonoBehaviour
 {
     public int sceneIndex;
+    public RectTransform anim;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,7 +16,13 @@ public class ScneneChanger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             print("Changing scene...");
-            SceneManager.LoadScene(sceneIndex);
+            anim.gameObject.SetActive(true);
+            //
         }
+    }
+
+    public void changeScene()
+    {
+        SceneManager.LoadScene(sceneIndex);
     }
 }
