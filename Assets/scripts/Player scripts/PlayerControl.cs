@@ -20,8 +20,8 @@ public class RotateClass : MonoBehaviour
 
     private void LookAtMouse()
     {
-        Vector2 mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.up = (Vector3)(mousePos - new Vector2(transform.position.x, transform.position.y));
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.up = mousePos - new Vector2(transform.position.x, transform.position.y);
     }
 
     private void Move()
