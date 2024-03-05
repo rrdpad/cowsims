@@ -846,11 +846,11 @@ PrefabInstance:
       objectReference: {fileID: 316902544346210978, guid: feea422cdb0ca1648b7fd20d8866f497, type: 3}
     - target: {fileID: 6335857153176761366, guid: ad5fdaf220f1860429a8e2a61cd2581c, type: 3}
       propertyPath: _maximumSpawnTime
-      value: 3333
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 6335857153176761366, guid: ad5fdaf220f1860429a8e2a61cd2581c, type: 3}
       propertyPath: _minimumSpawnTime
-      value: 3333
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -958,7 +958,7 @@ Transform:
   m_GameObject: {fileID: 91083079}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 148.78987, y: -60.4, z: 10}
+  m_LocalPosition: {x: 141.4, y: -58.3, z: 10}
   m_LocalScale: {x: 11.802898, y: 10.919752, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8703,11 +8703,11 @@ PrefabInstance:
       objectReference: {fileID: 9199461841517011606, guid: 8c691687fde287c4294ad7bf0cd341d9, type: 3}
     - target: {fileID: 6335857153176761366, guid: ad5fdaf220f1860429a8e2a61cd2581c, type: 3}
       propertyPath: _maximumSpawnTime
-      value: 33333
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6335857153176761366, guid: ad5fdaf220f1860429a8e2a61cd2581c, type: 3}
       propertyPath: _minimumSpawnTime
-      value: 33333
+      value: 165
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10919,11 +10919,11 @@ PrefabInstance:
       objectReference: {fileID: 7451121276993057841, guid: 9446f3556719cd048a275e32993bba45, type: 3}
     - target: {fileID: 6335857153176761366, guid: ad5fdaf220f1860429a8e2a61cd2581c, type: 3}
       propertyPath: _maximumSpawnTime
-      value: 3333
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6335857153176761366, guid: ad5fdaf220f1860429a8e2a61cd2581c, type: 3}
       propertyPath: _minimumSpawnTime
-      value: 33333
+      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13454,11 +13454,11 @@ PrefabInstance:
       objectReference: {fileID: 2346189160089109789, guid: 32a2c6597acd2d140a1c321bc4f20096, type: 3}
     - target: {fileID: 6335857153176761366, guid: ad5fdaf220f1860429a8e2a61cd2581c, type: 3}
       propertyPath: _maximumSpawnTime
-      value: 33333
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6335857153176761366, guid: ad5fdaf220f1860429a8e2a61cd2581c, type: 3}
       propertyPath: _minimumSpawnTime
-      value: 33333
+      value: 165
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -132426,11 +132426,11 @@ PrefabInstance:
       objectReference: {fileID: 3284103216798140852, guid: 45e5b56fca3d9f54da727175220e833c, type: 3}
     - target: {fileID: 6335857153176761366, guid: ad5fdaf220f1860429a8e2a61cd2581c, type: 3}
       propertyPath: _maximumSpawnTime
-      value: 3333
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 6335857153176761366, guid: ad5fdaf220f1860429a8e2a61cd2581c, type: 3}
       propertyPath: _minimumSpawnTime
-      value: 3000
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
