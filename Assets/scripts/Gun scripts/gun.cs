@@ -18,7 +18,7 @@ public class gun : MonoBehaviour
     }
     void Update()
     {
-        if(timeBtwShots <= 0)
+        if (timeBtwShots <= 0)
         {
             if (Input.GetMouseButton(0))
             {
@@ -31,13 +31,16 @@ public class gun : MonoBehaviour
             timeBtwShots -= Time.deltaTime;
         }
 
-        if (Input.GetMouseButtonDown(0) | Input.GetMouseButtonUp(0) == true)
+        if (gameObject.GetComponent<AudioSource>() != null)
         {
-            aS.Play();
-        }
-        if (Input.GetMouseButton(0) == false)
-        {
-            aS.Stop();
+            if (Input.GetMouseButtonDown(0) | Input.GetMouseButtonUp(0) == true)
+            {
+                aS.Play();
+            }
+            if (Input.GetMouseButton(0) == false && aS.isPlaying)
+            {
+                aS.Stop();
+            }
         }
     }
 }
