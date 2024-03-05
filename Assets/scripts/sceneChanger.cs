@@ -15,9 +15,14 @@ public class ScneneChanger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             print("Changing scene...");
+            SaveSystem.SavePlayer(GameObject.FindGameObjectWithTag("Player").GetComponent<RotateClass>());
             anim.gameObject.SetActive(true);
-            //
         }
+    }
+
+    public void offAnim()
+    {
+        anim.gameObject.SetActive(false);
     }
 
     public void changeScene()

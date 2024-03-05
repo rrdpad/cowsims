@@ -12,9 +12,11 @@ public class WeaponSwitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var filePath = @"./weapons.txt";
-        if (File.Exists(filePath))
-            boughtStatus = SplitNumbers(filePath);
+        boughtStatus = new int[3];
+        var data = SaveSystem.LoadPlayer();
+        boughtStatus[0] = data.purchasedWeapon[0];
+        boughtStatus[1] = data.purchasedWeapon[1];
+        boughtStatus[2] = data.purchasedWeapon[2];
     }
 
     // Update is called once per frame
