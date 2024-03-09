@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
             player.scoreCount = data.money;
         }
 
-        _scoreLabel.text = player.scoreCount.ToString();
+        _scoreLabel.text = $"Кашель: {player.scoreCount}";
     }
     private void Update()
     {
@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
             player.scoreCount += 2;
-            _scoreLabel.text = player.scoreCount.ToString();
+            _scoreLabel.text = $"Кашель: {player.scoreCount}";
         }
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
