@@ -36,7 +36,7 @@ public class buyScript : MonoBehaviour
 
 
     //TODO: исправить цены
-    public void buyAK()
+    public void BuyAK()
     {
         if (purchasedWeapon[0] == 0 && money >= 1)
         {
@@ -45,7 +45,7 @@ public class buyScript : MonoBehaviour
         }
         UpdateStatus();
     }
-    public void buyUZI()
+    public void BuyUZI()
     {
         if (purchasedWeapon[1] == 0 && money >= 1)
         {
@@ -54,7 +54,7 @@ public class buyScript : MonoBehaviour
         }
         UpdateStatus();
     }
-    public void buyMP5()
+    public void BuyMP5()
     {
         if (purchasedWeapon[2] == 0 && money >= 1)
         {
@@ -78,6 +78,6 @@ public class buyScript : MonoBehaviour
         moneyLabel.text = $"Кашель: {money}";
     }
 
-    public void toMenu() => SceneManager.LoadScene(0);
-    public void toGame() => SceneManager.LoadScene(2);
+    public void ToMenu() => SceneManager.LoadScene(0);
+    public void ToGame() => SceneManager.LoadScene(2);
 }
