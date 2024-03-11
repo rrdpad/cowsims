@@ -66,18 +66,9 @@ public class buyScript : MonoBehaviour
 
     private void updateStatus()
     {
-        if (purchasedWeapon[0] == 1)
-        {
-            ak.interactable = false;
-        }
-        if (purchasedWeapon[1] == 1)
-        {
-            uzi.interactable = false;
-        }
-        if (purchasedWeapon[2] == 1)
-        {
-            mp5.interactable = false;
-        }
+        akButton.interactable = purchasedWeapon[0] == 0;
+        uziButton.interactable = purchasedWeapon[1] == 0;
+        mp5Button.interactable = purchasedWeapon[2] == 0;
 
         var player = GetComponent<RotateClass>();
         player.scoreCount = money;
