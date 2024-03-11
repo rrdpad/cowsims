@@ -336,6 +336,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350566031}
   m_CullTransparentMesh: 1
+--- !u!114 &512346731 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4353008375946499616, guid: 40d53a38c9a6a98a481d3357859af9af, type: 3}
+  m_PrefabInstance: {fileID: 4227547661261170347}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81577714ac07803c7b53e6a0549e77a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &615503099
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,9 +812,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1749526519}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlaGame
+      - m_Target: {fileID: 512346731}
+        m_TargetAssemblyTypeName: levelLoader, Assembly-CSharp
+        m_MethodName: LoadNextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

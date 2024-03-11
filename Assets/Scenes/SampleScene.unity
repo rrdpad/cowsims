@@ -11516,7 +11516,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1059428564631274704, guid: 40d53a38c9a6a98a481d3357859af9af, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4353008375946499616, guid: 40d53a38c9a6a98a481d3357859af9af, type: 3}
       propertyPath: triggerShop

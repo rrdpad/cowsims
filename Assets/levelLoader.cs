@@ -7,26 +7,28 @@ using UnityEngine.UI;
 public class levelLoader : MonoBehaviour
 {
     public Animator transition;
-    public Button playButton;
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        //TODO: исправить зависание после нажатия
-        if (playButton != null)
-            playButton.onClick.AddListener(() => LoadNextLevel());
-    }
+    public int sceneIndex = 1;
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.CompareTag("Player"))
+        if (col.CompareTag("Player"))
             LoadNextLevel();
     }
 
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    public void LoadPreviousLevel()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+    }
+
+    public void LoadMenuLevel()
+    {
+        StartCoroutine(LoadLevel(0));
     }
 
     IEnumerator LoadLevel(int levelIndex)

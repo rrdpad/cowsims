@@ -264,6 +264,17 @@ MonoBehaviour:
   _speed: 0
   scoreCount: 0
   purchasedWeapon: 
+--- !u!114 &669270858 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4353008375946499616, guid: 40d53a38c9a6a98a481d3357859af9af, type: 3}
+  m_PrefabInstance: {fileID: 1810340583}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81577714ac07803c7b53e6a0549e77a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &845784923
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,9 +358,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 343046345}
-        m_TargetAssemblyTypeName: buyScript, Assembly-CSharp
-        m_MethodName: ToMenu
+      - m_Target: {fileID: 669270858}
+        m_TargetAssemblyTypeName: levelLoader, Assembly-CSharp
+        m_MethodName: LoadMenuLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1035,9 +1046,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 343046345}
-        m_TargetAssemblyTypeName: buyScript, Assembly-CSharp
-        m_MethodName: ToGame
+      - m_Target: {fileID: 669270858}
+        m_TargetAssemblyTypeName: levelLoader, Assembly-CSharp
+        m_MethodName: LoadPreviousLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
