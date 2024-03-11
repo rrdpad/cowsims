@@ -28,7 +28,7 @@ public class buyScript : MonoBehaviour
         purchasedWeapon[0] = data.purchasedWeapon[0];
         purchasedWeapon[1] = data.purchasedWeapon[1];
         purchasedWeapon[2] = data.purchasedWeapon[2];
-        updateStatus();
+        UpdateStatus();
         moneyLabel.text = $"Кашель: {money}";
 
         print(money);
@@ -41,34 +41,34 @@ public class buyScript : MonoBehaviour
         if (purchasedWeapon[0] == 0 && money >= 1)
         {
             purchasedWeapon[0] = 1;
-            money -= 1;
+            money--;
         }
-        updateStatus();
+        UpdateStatus();
     }
     public void buyUZI()
     {
         if (purchasedWeapon[1] == 0 && money >= 1)
         {
             purchasedWeapon[1] = 1;
-            money -= 1;
+            money--;
         }
-        updateStatus();
+        UpdateStatus();
     }
     public void buyMP5()
     {
         if (purchasedWeapon[2] == 0 && money >= 1)
         {
             purchasedWeapon[2] = 1;
-            money -= 1;
+            money--;
         }
-        updateStatus();
+        UpdateStatus();
     }
 
-    private void updateStatus()
+    private void UpdateStatus()
     {
-        akButton.interactable = purchasedWeapon[0] == 0;
-        uziButton.interactable = purchasedWeapon[1] == 0;
-        mp5Button.interactable = purchasedWeapon[2] == 0;
+        ak.interactable = purchasedWeapon[0] == 0;
+        uzi.interactable = purchasedWeapon[1] == 0;
+        mp5.interactable = purchasedWeapon[2] == 0;
 
         var player = GetComponent<RotateClass>();
         player.scoreCount = money;
