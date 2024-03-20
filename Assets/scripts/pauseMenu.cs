@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pauseMenu : MonoBehaviour
 {
@@ -12,8 +13,13 @@ public class pauseMenu : MonoBehaviour
         RotateClass.gamePaused = false;
     }
 
-    //TODO: сделать кнопку выхода в меню
-    public void Exit()
+    public void ExitMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+    }
+
+    public void ExitFromGame()
     {
         Application.Quit();
     }
