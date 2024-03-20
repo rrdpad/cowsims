@@ -15,12 +15,20 @@ public class RotateClass : MonoBehaviour
 
     private Animator _anim;
 
+    // Pause
+    private GameObject _pauseConvas;
+    public static bool gamePaused = false;
+
     void Start()
     {
         if (gameObject.name == "Canvas") return;
 
         _rigidbody = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
+
+        _pauseConvas = GameObject.Find("PauseMenu");
+        _pauseConvas.SetActive(gamePaused);
+
         purchasedWeapon = new int[3];
         if (File.Exists(Application.persistentDataPath + "/player.save"))
         {
@@ -42,6 +50,13 @@ public class RotateClass : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gamePaused = !gamePaused;
+            pauseGame();
+        }
+
+        if (gamePaused == true) return;
         LookAtMouse();
         Move();
     }
@@ -67,6 +82,20 @@ public class RotateClass : MonoBehaviour
             {
                 _anim.SetBool("is running", false);
             }
+        }
+    }
+
+    void pauseGame()
+    {
+        if (gamePaused == true)
+        {
+            Time.timeScale = 0f;
+            _pauseConvas.SetActive(gamePaused);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            _pauseConvas.SetActive(gamePaused);
         }
     }
 }

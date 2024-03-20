@@ -18,6 +18,8 @@ public class gun : MonoBehaviour
     }
     void Update()
     {
+        if (RotateClass.gamePaused == true) return;
+
         if (timeBtwShots <= 0)
         {
             if (Input.GetMouseButton(0))
