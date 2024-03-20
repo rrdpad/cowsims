@@ -5549,6 +5549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Femka 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4867937932123070280, guid: 45e5b56fca3d9f54da727175220e833c, type: 3}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2762887873758036823, guid: 45e5b56fca3d9f54da727175220e833c, type: 3}
     - {fileID: 6637722679436504367, guid: 45e5b56fca3d9f54da727175220e833c, type: 3}

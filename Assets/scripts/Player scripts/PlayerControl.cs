@@ -30,6 +30,8 @@ public class RotateClass : MonoBehaviour
         _pauseConvas.SetActive(gamePaused);
 
         purchasedWeapon = new int[3];
+
+
         if (File.Exists(Application.persistentDataPath + "/player.save"))
         {
             var data = SaveSystem.LoadPlayer();
@@ -37,16 +39,16 @@ public class RotateClass : MonoBehaviour
             purchasedWeapon[0] = data.purchasedWeapon[0];
             purchasedWeapon[1] = data.purchasedWeapon[1];
             purchasedWeapon[2] = data.purchasedWeapon[2];
-        }
-        else
-        {
-            scoreCount = 0;
-            purchasedWeapon[0] = 0;
-            purchasedWeapon[1] = 0;
-            purchasedWeapon[2] = 0;
-            SaveSystem.SavePlayer(this);
-        }
 
+            _scoreLabel = GameObject.FindGameObjectWithTag("Score").GetComponent<TextMeshProUGUI>();
+            _scoreLabel.text = $"Кашель: {scoreCount}";
+            return;
+        }
+        scoreCount = 0;
+        purchasedWeapon[0] = 0;
+        purchasedWeapon[1] = 0;
+        purchasedWeapon[2] = 0;
+        SaveSystem.SavePlayer(this);
     }
     void Update()
     {

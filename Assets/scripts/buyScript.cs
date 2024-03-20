@@ -21,7 +21,6 @@ public class buyScript : MonoBehaviour
 
         purchasedWeapon = new int[3];
         var temp = GetComponent<RotateClass>().purchasedWeapon;
-
         money = GetComponent<RotateClass>().scoreCount;
         var data = SaveSystem.LoadPlayer();
         money = data.money;

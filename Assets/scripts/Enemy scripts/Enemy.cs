@@ -30,13 +30,7 @@ public class Enemy : MonoBehaviour
         obj = GameObject.Find("1");
         _scoreLabel = GameObject.FindGameObjectWithTag("Score").GetComponent<TextMeshProUGUI>();
         
-        if (File.Exists(Application.persistentDataPath + "/player.save"))
-        {
-            var data = SaveSystem.LoadPlayer();
-            player.scoreCount = data.money;
-        }
-
-        _scoreLabel.text = $"Кашель: {player.scoreCount}";
+            _scoreLabel.text = $"Кашель: {player.scoreCount}";
     }
     private void Update()
     {
@@ -44,11 +38,17 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            player.scoreCount += 2;
-            _scoreLabel.text = $"Кашель: {player.scoreCount}";
+            GetMoney();
         }
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
+    }
+
+    private void GetMoney()
+    {
+        player.scoreCount += 2;
+        _scoreLabel.text = $"Кашель: {player.scoreCount}";
+        SaveSystem.SavePlayer(player);
     }
     public void TakeDamage(int damage)
     {
