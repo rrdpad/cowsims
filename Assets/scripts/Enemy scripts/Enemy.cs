@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
 
     private TextMeshProUGUI _scoreLabel;
 
+    private ParticleSystem _blood;
+
     private void Awake()
     {
         _anim = GetComponent<Animator>();
@@ -29,8 +31,11 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<RotateClass>();
         obj = GameObject.Find("1");
         _scoreLabel = GameObject.FindGameObjectWithTag("Score").GetComponent<TextMeshProUGUI>();
-        
-            _scoreLabel.text = $"Кашель: {player.scoreCount}";
+
+        _scoreLabel.text = $"Кашель: {player.scoreCount}";
+    
+        _blood = GameObject.Find("BloodParticle").GetComponent<ParticleSystem>();
+        _blood.Stop();
     }
     private void Update()
     {
@@ -53,5 +58,6 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        _blood.Play();
     }
 }

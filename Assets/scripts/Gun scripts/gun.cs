@@ -11,11 +11,16 @@ public class gun : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
 
+    private ParticleSystem _bulletParticle;
+
 
     private void Awake()
     {
         aS = GetComponent<AudioSource>();
+        _bulletParticle = GameObject.Find("FireEffect").GetComponent<ParticleSystem>();
+        _bulletParticle.Stop();
     }
+
     void Update()
     {
         if (RotateClass.gamePaused == true) return;
@@ -26,6 +31,7 @@ public class gun : MonoBehaviour
             {
                 Instantiate(bullet, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
+                _bulletParticle.Play();
             }
         }
         else
