@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
 
         _scoreLabel.text = $"Кашель: {player.scoreCount}";
     
-        _blood = GameObject.Find("BloodParticle").GetComponent<ParticleSystem>();
+        _blood = transform.Find("BloodParticle").GetComponent<ParticleSystem>();
         _blood.Stop();
     }
     private void Update()
